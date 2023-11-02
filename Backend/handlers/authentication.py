@@ -15,7 +15,3 @@ class LoginHandler:
         if not user:
             return False
         return True
-
-# todo: Change to central test location
-test_login_handler = LoginHandler()
-assert test_login_handler.validate_user("test", "test")

@@ -13,5 +13,7 @@ class LoginHandler:
         cur.execute("select * from login_details where user_id=? and password=?",(user_name, password))
         user = cur.fetchone()
         if not user:
+            cur.close()
             return False
+        cur.close()
         return True
